@@ -1,4 +1,4 @@
-import factorymethod.Juoma;
+package factorymethod;
 
 public class Olut implements Juoma{
     

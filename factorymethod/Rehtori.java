@@ -1,4 +1,4 @@
-package week1;
+package factorymethod;
 
 public class Rehtori extends AterioivaOtus{
     

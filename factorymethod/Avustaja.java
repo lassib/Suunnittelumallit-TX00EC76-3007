@@ -1,5 +1,4 @@
-import factorymethod.AterioivaOtus;
-import factorymethod.Juoma;
+package factorymethod;
 
 public class Avustaja extends AterioivaOtus{
     
