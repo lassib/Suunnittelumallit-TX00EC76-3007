@@ -19,11 +19,11 @@ public class Jasper implements Person{
     }
 
     public void flexClothes() {
-        System.out.println("Jasper is wearing: " + pants + ", " + shirt + ", " + shoes + ", " + cap + ".");
+        System.out.println("Jasper is wearing: " + pants + ", " + shirt + ", " + shoes + " and " + cap + ".");
     }
 
     @Override
     public String toString() {
-        return "Jasper is wearing: " + pants + ", " + shirt + ", " + shoes + ", " + cap + ".";
+        return "Jasper is wearing: " + pants + ", " + shirt + ", " + shoes + " and " + cap + ".";
     }
 }
