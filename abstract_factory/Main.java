@@ -6,10 +6,10 @@ public class Main {
         Person jasper = new Jasper();
         ClothesFactory clothesFactory = new AdidasFactory();
         jasper.wearClothes(clothesFactory);
-        System.out.println(jasper);
+        jasper.flexClothes();
 
         clothesFactory = new BossFactory();
         jasper.wearClothes(clothesFactory);
-        System.out.println(jasper);
+        jasper.flexClothes();
     }
 }

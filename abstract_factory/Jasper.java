@@ -18,6 +18,10 @@ public class Jasper implements Person{
         cap = clothesFactory.createCap().toString();
     }
 
+    public void flexClothes() {
+        System.out.println("Jasper is wearing: " + pants + ", " + shirt + ", " + shoes + ", " + cap + ".");
+    }
+
     @Override
     public String toString() {
         return "Jasper is wearing: " + pants + ", " + shirt + ", " + shoes + ", " + cap + ".";
