@@ -2,13 +2,24 @@ package composite;
 
 public class HDD implements ComputerPart{
 
-    private int price;
+    private String name;
+    private double price;
 
-    public HDD(int price) {
+    public HDD(String name, double price) {
+        this.name = name;
         this.price = price;
     }
 
-    public int getPrice() {
+    public String getName() {
+        return name;
+    }
+
+    public double getPrice() {
         return price;
+    }
+
+    @Override
+    public String toString() {
+        return "HDD name: " + name + ", Price: " + price;
     }
 }

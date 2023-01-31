@@ -2,14 +2,24 @@ package composite;
 
 public class NetwordCard implements ComputerPart{
     
-    private int price;
+    private String name;
+    private double price;
     
-    public NetwordCard(int price) {
+    public NetwordCard(String name, double price) {
+        this.name = name;
         this.price = price;
     }
-    
-    @Override
-    public int getPrice() {
+
+    public String getName() {
+        return name;
+    }
+
+    public double getPrice() {
         return price;
+    }
+
+    @Override
+    public String toString() {
+        return "Network card name: " + name + ", Price: " + price;
     }
 }

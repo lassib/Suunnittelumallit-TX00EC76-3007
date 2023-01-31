@@ -2,14 +2,24 @@ package composite;
 
 public class Prosessor implements ComputerPart{
     
-    private int price;
+    private String name;
+    private double price;
     
-    public Prosessor(int price) {
+    public Prosessor(String name, double price) {
+        this.name = name;
         this.price = price;
     }
+
+    public String getName() {
+        return name;
+    }
     
-    @Override
-    public int getPrice() {
+    public double getPrice() {
         return price;
+    }
+
+    @Override
+    public String toString() {
+        return "Processor name: " + name + ", Price: " + price;
     }
 }

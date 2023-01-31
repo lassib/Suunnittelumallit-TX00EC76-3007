@@ -2,5 +2,6 @@ package composite;
 
 public interface ComputerPart {
     
-    public int getPrice();
+    public double getPrice();
+    public String getName();
 }
