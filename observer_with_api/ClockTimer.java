@@ -14,18 +14,6 @@ public class ClockTimer extends Observable implements Runnable{
         second = 0;
     }
 
-    public void setHour(int hour) {
-        this.hour = hour;
-    }
-
-    public void setMinute(int minute) {
-        this.minute = minute;
-    }
-
-    public void setSecond(int second) {
-        this.second = second;
-    }
-    
     public int getHour() {
         return hour;
     }
@@ -40,19 +28,26 @@ public class ClockTimer extends Observable implements Runnable{
 
     @Override
     public void run() {
-        second++;
-        if (second == 60) {
-            second = 0;
-            minute++;
-            if (minute == 60) {
-                minute = 0;
-                hour++;
-                if (hour == 24) {
-                    hour = 0;
+        while(true){
+            if (second == 60) {
+                second = 0;
+                minute++;
+                if (minute == 60) {
+                    minute = 0;
+                    hour++;
+                    if (hour == 24) {
+                        hour = 0;
+                    }
                 }
             }
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+            second++;
+            setChanged();
+            notifyObservers(this);
         }
-        setChanged();
-        notifyObservers();
     }
 }
