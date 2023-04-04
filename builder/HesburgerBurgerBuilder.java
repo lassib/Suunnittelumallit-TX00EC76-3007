@@ -34,6 +34,7 @@ public class HesburgerBurgerBuilder implements IBurgerBuilder {
 
     @Override
     public Object getBurger() {
-        return new HesburgerBurger(burgerParts);
+        burger = new HesburgerBurger(burgerParts);
+        return burger;
     }
 }

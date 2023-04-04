@@ -38,6 +38,7 @@ public class McDonaldsBurgerBuilder implements IBurgerBuilder {
 
     @Override
     public Object getBurger() {
-        return new McDonaldsBurger(burgerParts);
+        burger = new McDonaldsBurger(burgerParts);
+        return burger;
     }
 }
